@@ -32,10 +32,11 @@ export function SubmitButton() {
 
 export default function Upvote({ voting, id }: { voting: number; id: string }) {
   const initialState = {
-    id,                        
+    id,
     voting,
   };
 
+  // @ts-expect-error
   const [state, dispatch] = useFormState(upvoteAction, initialState);
 
   return (

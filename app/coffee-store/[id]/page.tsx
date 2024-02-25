@@ -6,7 +6,6 @@ import { CoffeeStoreType } from '@/types';
 import { createCoffeeStore } from '@/lib/airtable';
 import { ServerParamsType } from '@/types';
 import { getDomain } from '@/utils';
-import { Metadata } from 'next';
 
 async function getData(id: string, queryId: string) {
   const coffeeStoreFromMapbox = await fetchCoffeeStore(id, queryId);
@@ -31,7 +30,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetaData({
+export async function generateMetadata({
   params,
   searchParams
 }: ServerParamsType) {

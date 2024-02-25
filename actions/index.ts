@@ -1,13 +1,13 @@
-'use server'
+'use server';
 
-import { updateCoffeeStore } from "@/lib/airtable"
+import { updateCoffeeStore } from '@/lib/airtable';
 
 type State = {
   id: string;
 };
 
 export const upvoteAction = async (prevState: State) => {
-  console.log('upvote action')
+  console.log('upvote action');
 
   const { id } = prevState;
 
@@ -17,7 +17,7 @@ export const upvoteAction = async (prevState: State) => {
   if (data) {
     return {
       voting: data.length > 0 ? data[0].voting : 0,
-      id
-    }
+      id,
+    };
   }
-}
+};
