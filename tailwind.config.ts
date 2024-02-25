@@ -13,7 +13,7 @@ const config: Config = {
         inter: ['var(--font-inter']
       },
       backgroundImage: {
-        gradient: "url('/static/background.png')"
+        gradient: "url('/static/background.webp')"
       },
       colors: {
         purple: {
