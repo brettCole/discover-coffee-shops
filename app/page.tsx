@@ -8,9 +8,9 @@ import { Metadata } from "next";
 
 async function getData() {
   if (
-    !process.env.MAPBOX_API || 
-    !process.env.UNSPLASH_ACCESS_KEY || 
-    !process.env.AIRTABLE_TOKEN
+    !process.env.NEXT_PUBLIC_MAPBOX_API || 
+    !process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY || 
+    !process.env.NEXT_PUBLIC_AIRTABLE_TOKEN
   ) {
     throw new Error('One of the API keys is not configured');
   }
