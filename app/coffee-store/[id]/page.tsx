@@ -51,16 +51,6 @@ export async function generateMetaData({
   }
 }
 
-export const metadata: Metadata = {
-  title: 'Coffee Connoisseur',
-  description: 'Allows you to discover coffee shops near you',
-  metadataBase: getDomain(),
-  alternates: {
-    canonical: '/',
-  }
-}
-
-
 export default async function Page(props: { 
   params: { id: string };
   searchParams: { id: string };

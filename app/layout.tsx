@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { getDomain } from "@/utils";
 
 const ibmPlexSans  = IBM_Plex_Sans({ 
   display: 'swap', 
@@ -9,9 +10,13 @@ const ibmPlexSans  = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Coffee Connoisseur",
-  description: "Discover your local coffee shops.",
-};
+  title: 'Coffee Connoisseur',
+  description: 'Allows you to discover coffee shops near you',
+  metadataBase: getDomain(),
+  alternates: {
+    canonical: '/',
+  }
+}
 
 export default function RootLayout({
   children,
