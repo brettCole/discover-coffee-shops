@@ -1,7 +1,7 @@
 import { AirtableRecordType, CoffeeStoreType } from "@/types";
 
 var Airtable = require('airtable');
-var base = new Airtable({ apiKey: process.env.NEXT_PUBLIC_AIRTABLE_TOKEN }).base(
+var base = new Airtable({ apiKey: process.env.AIRTABLE_TOKEN }).base(
   'appYU9Z8hJKHJNW9P'
 );
 
